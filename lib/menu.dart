@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'configurator.dart';
 import 'pizza.dart';
 
 class Menu extends StatelessWidget {
@@ -39,21 +40,33 @@ class Menu extends StatelessWidget {
                     ),
                     const SizedBox(height: 10.0),
                     const Text(
-                      'Składniki:',
+                      'Toppings:',
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     const SizedBox(height: 5.0),
-                    Text(pizzas[index].ingredients.join(', ')),
+                    Text(
+                      pizzas[index]
+                          .ingredients
+                          .map((ingredient) => ingredient.name)
+                          .join(', '),
+                      style: const TextStyle(fontSize: 16),
+                    ),
                     const SizedBox(height: 20.0),
                     ElevatedButton(
                       onPressed: () {
-                        // Naciśnięcie przycisku "Konfiguruj"
-                        // navigateToConfigurator(context, pizzas[index]);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => PizzaConfigurator(
+                              pizza: pizzas[index],
+                            ),
+                          ),
+                        );
                       },
-                      child: const Text('Konfiguruj'),
+                      child: const Text('Add to cart'),
                     ),
                     const SizedBox(
                         height: 10.0), // Odstęp między przyciskiem a linią

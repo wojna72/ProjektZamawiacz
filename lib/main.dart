@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'logowanie.dart'; // Importuje LoginPage z pliku logowanie.dart
-import 'configurator.dart';
+import 'menu.dart'; // Importuje Menu z pliku menu.dart
 import 'pizza.dart';
 
 void main() {
@@ -53,7 +53,6 @@ class MainScreen extends StatelessWidget {
             ),
           ),
         ),
-        body:
-            PizzaConfigurator(pizza: PizzaMenu.getPizza(PizzaType.margherita)));
+        body: Menu());
   }
 }
