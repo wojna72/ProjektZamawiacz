@@ -66,7 +66,7 @@ class Menu extends StatelessWidget {
                           ),
                         );
                       },
-                      child: const Text('Add to cart'),
+                      child: const Text('Configure'),
                     ),
                     const SizedBox(
                         height: 10.0), // Odstęp między przyciskiem a linią

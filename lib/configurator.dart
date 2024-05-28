@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projekt/data/cart.dart';
 import 'pizza.dart';
 
 class PizzaConfigurator extends StatefulWidget {
@@ -131,7 +132,9 @@ class _PizzaConfiguratorState extends State<PizzaConfigurator> {
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  // Handle order button press here
+                  Cart.addToCart(pizza);
+                  Navigator.pop(context);
+                  print(Cart.calculateTotalPrice());
                 },
                 child: const Text('Add to cart'),
               ),

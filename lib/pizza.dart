@@ -89,6 +89,17 @@ class PizzaMenu {
         9.99,
         PizzaSize.medium,
         'https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_960_720.jpg'),
+    Pizza(
+        'Hawaian (BAD PIZZA! DON\'T ORDER)',
+        [
+          IngredientMenu.getIngredient(IngredientType.tomatoSauce),
+          IngredientMenu.getIngredient(IngredientType.mozzarellaCheese),
+          IngredientMenu.getIngredient(IngredientType.basil),
+          IngredientMenu.getIngredient(IngredientType.mixedVegetables)
+        ],
+        9.99,
+        PizzaSize.medium,
+        'https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_960_720.jpg'),
   ];
 
   static Pizza getPizza(PizzaType type) {

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:projekt/configurator.dart';
+import 'package:projekt/data/cart.dart';
 import 'logowanie.dart'; // Importuje LoginPage z pliku logowanie.dart
 import 'menu.dart'; // Importuje Menu z pliku menu.dart
 import 'pizza.dart';
+import 'cartScreen.dart'; // Importuje CartScreen z pliku cartScreen.dart
 
 void main() {
   runApp(MyApp());
@@ -34,7 +38,12 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-class MainScreen extends StatelessWidget {
+class MainScreen extends StatefulWidget {
+  @override
+  _MainScreenState createState() => _MainScreenState();
+}
+
+class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,6 +62,30 @@ class MainScreen extends StatelessWidget {
             ),
           ),
         ),
-        body: Menu());
+        body: Menu(),
+        bottomNavigationBar: BottomAppBar(
+          color: Colors.red,
+          child: InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CartScreen(),
+                ),
+              );
+            },
+            child:  const Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Text(
+                'Go to cart',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                )
+              )
+            )
+          )
+        ),
+    );
   }
 }
