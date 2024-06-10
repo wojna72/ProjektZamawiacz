@@ -115,3 +115,9 @@ class PizzaMenu {
     }
   }
 }
+
+//CODE REVIEW:
+// Na pierwszy rzut oka jasno i klarownie widać co opisuje ten plik .dart
+// Osobiscie zaproponujemy uzycie zamiast gotowych obrazkow - tych dostepnych z lorem picsum
+// Zalety kodu to z pewnością przypisanie skladnikom wartosci const, 
+// Sugestia poprawy funkcjonalności ingredients o aktualnie brakujace skladniki w restauracji.

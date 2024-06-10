@@ -145,3 +145,9 @@ class _PizzaConfiguratorState extends State<PizzaConfigurator> {
     );
   }
 }
+
+//CODE REVIEW:
+// Dobrze zdefiniowane api calculateTotalPrice i ToggleIngredient 
+// Wysoka czytelność kodu
+// Sugerowane poprawki to optymalizacja wyboru rozmiaru - mozliwosc zawarcia jej w petli
+// Formatowanie ceny aby wyswietlala sie w sposob sformatowany do dwoch miejsc po przecinku

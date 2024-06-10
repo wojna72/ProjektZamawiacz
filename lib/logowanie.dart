@@ -83,3 +83,7 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
+
+//CODE REVIEW:
+//  Ponownie sugestia poprawy o przypisanie wartosci const dla ponownie uzywanych styli, textow i padding'ow,
+// Poza malymi sugestiami kod jest czytelny stad nie gubimy sie co jest w nim zawarte

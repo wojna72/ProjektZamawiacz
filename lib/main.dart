@@ -40,10 +40,10 @@ class _MyAppState extends State<MyApp> {
 
 class MainScreen extends StatefulWidget {
   @override
-  _MainScreenState createState() => _MainScreenState();
+  _MainScreenState createState() => _MainScreenState();   //CODE REVIEW: Moliwa zmiana na StatelessWidget - Stateful nie utrzymuje stanu wewnętrznego
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _MainScreenState extends State<MainScreen> {    //CODE REVIEW: Mozna przypisać do padding i text wartość typu const
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,3 +89,11 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 }
+
+//    CODE REVIEW
+//
+//  Kod czytelny, nasze obiekcje są tylko do niezuywanych importów
+//  oraz przeniesienie definicji kolorow do innego pliku w celu dalszej modyfikacji motywu
+//
+// ******************************************************************
+
