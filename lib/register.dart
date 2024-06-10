@@ -89,3 +89,6 @@ class RejestracjaPage extends StatelessWidget {
     );
   }
 }
+
+//CODE REVIEW:
+// Porządnie napisany plik, zadnych zastrzezen poza ponowna sugestia o przypisanie wartosci const do np. Text czy padding ktore sa niezmienne

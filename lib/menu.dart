@@ -83,3 +83,8 @@ class Menu extends StatelessWidget {
     );
   }
 }
+
+//CODE REVIEW:
+//  Kod czytelny, nasze sugestie to dodanie obsługi braku obrazu - placeholder gdy uzytkownik nie moze zaladowac zdjecia,
+// i wyciegniecie ''itembuilder'' do oddzielnej funkcji zdecydowanie poprawi czytelnosc kodu. W kodzie podoba nam się deklratywnosc 
+// oraz uzycie widgetow takich jak ClipReact do zaokraglania obrazow
